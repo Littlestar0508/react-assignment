@@ -25,6 +25,8 @@
     padding: 1.5625rem;
     border-radius: 0.75rem;
     display: none;
+    pointer-events: none;
+    z-index: 999;
   }
 
   &:hover {
