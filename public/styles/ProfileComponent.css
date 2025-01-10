@@ -8,7 +8,6 @@
 
 .add-profile-btn {
   cursor: pointer;
-  background-color: #e8eef2;
   background-image: url("../src/profile-btn.svg");
   inline-size: 100%;
   block-size: 6.25rem;
