@@ -12,6 +12,26 @@
   inline-size: 100%;
   block-size: 6.25rem;
   border-radius: 0.75rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .profile-edit-img {
+    position: absolute;
+    block-size: 100%;
+    inline-size: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5625rem;
+    border-radius: 0.75rem;
+    display: none;
+  }
+
+  &:hover {
+    .profile-edit-img {
+      display: inline-block;
+    }
+  }
 }
 
 .add-profile-text {
