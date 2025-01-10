@@ -24,14 +24,15 @@
     background-color: rgba(0, 0, 0, 0.2);
     padding: 1.5625rem;
     border-radius: 0.75rem;
-    display: none;
+    opacity: 0;
     pointer-events: none;
     z-index: 999;
+    transition: all 0.3s;
   }
 
   &:hover {
     .profile-edit-img {
-      display: inline-block;
+      opacity: 1;
     }
   }
 }
