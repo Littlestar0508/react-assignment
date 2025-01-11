@@ -6,6 +6,7 @@ function ProfileText() {
     type: "text",
     placeholder: "프로필 편집",
     "aria-label": "프로필 닉네임 설정",
+    maxlength: "6",
   });
 }
 
