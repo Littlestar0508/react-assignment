@@ -1,9 +1,17 @@
+noscript {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .profile-edit-container {
   display: flex;
   flex-direction: column;
   width: 6.25rem;
   gap: 0.5rem;
   margin-inline: auto;
+  margin-block-start: 50px;
 
   .add-profile-btn {
     cursor: pointer;
