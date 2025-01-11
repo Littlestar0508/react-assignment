@@ -5,8 +5,8 @@ import InputProfileFile from "./InputProfileFile.js";
 
 function Wrapper(props: { size: string; image: string; editProfile: () => void; changeImage: () => void }) {
   return React.createElement(
-    React.Fragment,
-    null,
+    "div",
+    { className: "profile-edit-container" },
     React.createElement(ProfileButton, { editProfile: props.editProfile }),
     React.createElement(ProfileText),
     React.createElement(InputProfileFile, { changeImage: props.changeImage })
