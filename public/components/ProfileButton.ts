@@ -1,15 +1,15 @@
 import React from "../lib/react.js";
 import ProfileEdit from "./ProfileEdit.js";
 
-function ProfileButton(props: { size: string; image: string; render: () => void }) {
+function ProfileButton(props: { editProfile: () => void }) {
   return React.createElement(
     "button",
     {
       type: "button",
       className: "add-profile-btn",
-      style: { backgroundImage: `${props.image}`, backgroundSize: props.size },
+      style: {},
       onClick: () => {
-        props.render();
+        props.editProfile();
       },
     },
     React.createElement(ProfileEdit)

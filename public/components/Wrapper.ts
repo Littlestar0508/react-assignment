@@ -1,13 +1,15 @@
 import React from "../lib/react.js";
 import ProfileButton from "./ProfileButton";
 import ProfileText from "./ProfileText";
+import InputProfileFile from "./InputProfileFile.js";
 
-function Wrapper(props: { size: string; image: string; render: () => void }) {
+function Wrapper(props: { size: string; image: string; editProfile: () => void; changeImage: () => void }) {
   return React.createElement(
     React.Fragment,
     null,
-    React.createElement(ProfileButton, { size: props.size, image: props.image, render: props.render }),
-    React.createElement(ProfileText)
+    React.createElement(ProfileButton, { editProfile: props.editProfile }),
+    React.createElement(ProfileText),
+    React.createElement(InputProfileFile, { changeImage: props.changeImage })
   );
 }
 
