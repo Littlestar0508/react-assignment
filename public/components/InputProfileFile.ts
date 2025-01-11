@@ -3,6 +3,7 @@ import React from "../lib/react.js";
 function InputProfileFile(props: { changeImage: () => void }) {
   return React.createElement("input", {
     className: "input-profile-file",
+    id: "select-img",
     type: "file",
     accept: "image/*",
     style: {
