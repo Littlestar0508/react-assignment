@@ -43,5 +43,9 @@
     font-size: 0.875rem;
     width: 100%;
     text-align: center;
+
+    &:focus::placeholder {
+      color: transparent;
+    }
   }
 }
