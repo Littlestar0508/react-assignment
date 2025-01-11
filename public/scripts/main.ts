@@ -7,6 +7,8 @@ const ReactDOMRoot = ReactDOM.createRoot(document.getElementById("react"));
 function changeImage() {
   const file = document.querySelector(".input-profile-file") as HTMLInputElement;
   const button = document.querySelector(".add-profile-btn") as HTMLButtonElement;
+  const editIcon = document.querySelector(".profile-edit-icon") as HTMLImageElement;
+
   const img = file.files ? file.files[0] : null;
 
   if (img) {
@@ -16,6 +18,8 @@ function changeImage() {
       button.style.backgroundImage = `url(${(e.target as FileReader).result})`;
       button.style.backgroundSize = "100px 100px";
     };
+
+    editIcon.style.display = "block";
 
     reader.readAsDataURL(img);
   }
