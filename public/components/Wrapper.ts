@@ -3,7 +3,7 @@ import ProfileButton from "./ProfileButton";
 import ProfileText from "./ProfileText";
 import InputProfileFile from "./InputProfileFile.js";
 
-function Wrapper(props: { size: string; image: string; editProfile: () => void; changeImage: () => void }) {
+function Wrapper(props: { editProfile: () => void; changeImage: () => void }) {
   return React.createElement(
     "div",
     { className: "profile-edit-container" },

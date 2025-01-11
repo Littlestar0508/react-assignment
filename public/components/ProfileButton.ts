@@ -7,7 +7,7 @@ function ProfileButton(props: { editProfile: () => void }) {
     {
       type: "button",
       className: "add-profile-btn",
-      style: {},
+      "aria-label": "프로필 사진 선택",
       onClick: () => {
         props.editProfile();
       },
