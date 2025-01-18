@@ -1,6 +1,6 @@
 import React from "../lib/react.js";
-import ProfileButton from "./ProfileButton";
-import ProfileText from "./ProfileText";
+import ProfileButton from "./ProfileButton.js";
+import ProfileText from "./ProfileText.js";
 import InputProfileFile from "./InputProfileFile.js";
 
 function Wrapper(props: { editProfile: () => void; changeImage: () => void }) {
