@@ -1,0 +1,16 @@
+# 최상위 폴더에 표시
+root = true
+
+# 모든 파일에 적용
+[*]
+# 들여쓰기를 space로 설정하고 그 크기를 2회 동작으로 지정
+indent_style =  space
+indent_size =  2
+#줄바꿈 설정
+end_of_line =  crlf
+#인코딩 방식 설정
+charset = utf-8
+#문자 앞 공백 제거X
+trim_trailing_whitespace  = false
+#저장 시 새 줄로 끝남
+insert_final_newline = true
