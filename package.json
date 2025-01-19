@@ -13,7 +13,8 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint --cache 'src/**/*.{ts,tsx}'"
+    "lint": "eslint --cache 'src/**/*.{ts,tsx}'",
+    "format": "prettier --cache 'src/**/*.{ts,tsx}'"
   },
   "devDependencies": {
     "@types/react": "^19.0.7",
@@ -32,3 +33,4 @@
     "react-dom": "19"
   }
 }
+
