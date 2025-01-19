@@ -15,7 +15,7 @@ noscript {
 
   .add-profile-btn {
     cursor: pointer;
-    background-image: url("../src/profile-btn.svg");
+    background-image: url("/src/profile-btn.svg");
     inline-size: 100%;
     block-size: 6.25rem;
     border-radius: 0.75rem;
