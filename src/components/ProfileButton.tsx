@@ -1,5 +1,5 @@
 import React from "../lib/react.js";
-import ProfileEdit from "./ProfileEdit.js";
+import ProfileEdit from "./ProfileEdit.tsx";
 
 function ProfileButton(props: { editProfile: () => void }) {
   return React.createElement(

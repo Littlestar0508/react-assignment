@@ -1,7 +1,7 @@
 import React from "../lib/react.js";
-import ProfileButton from "./ProfileButton.js";
-import ProfileText from "./ProfileText.js";
-import InputProfileFile from "./InputProfileFile.js";
+import ProfileButton from "./ProfileButton.tsx";
+import ProfileText from "./ProfileText.tsx";
+import InputProfileFile from "./InputProfileFile.tsx";
 
 function Wrapper(props: { editProfile: () => void; changeImage: () => void }) {
   return React.createElement(

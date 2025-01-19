@@ -6,9 +6,15 @@ const ReactDOMRoot = ReactDOM.createRoot(document.getElementById("react"));
 
 // input[type='file'] 설정 : 이미지 사용자의 개인 장소에서 가져오기
 function changeImage() {
-  const file = document.querySelector(".input-profile-file") as HTMLInputElement;
-  const button = document.querySelector(".add-profile-btn") as HTMLButtonElement;
-  const editIcon = document.querySelector(".profile-edit-icon") as HTMLImageElement;
+  const file = document.querySelector(
+    ".input-profile-file"
+  ) as HTMLInputElement;
+  const button = document.querySelector(
+    ".add-profile-btn"
+  ) as HTMLButtonElement;
+  const editIcon = document.querySelector(
+    ".profile-edit-icon"
+  ) as HTMLImageElement;
 
   // img가 null일 가능성 고려
   const img = file.files ? file.files[0] : null;
@@ -34,13 +40,17 @@ function changeImage() {
 
 // button을 클릭 시 input이 작동하도록 설정
 function editProfile() {
-  const input = document.querySelector(".input-profile-file") as HTMLInputElement;
+  const input = document.querySelector(
+    ".input-profile-file"
+  ) as HTMLInputElement;
   input.click();
 }
 
 // Actual DOM에 렌더링
 function render() {
-  ReactDOMRoot.render(React.createElement(Wrapper, { editProfile, changeImage }));
+  ReactDOMRoot.render(
+    React.createElement(Wrapper, { editProfile, changeImage })
+  );
 }
 
 render();
