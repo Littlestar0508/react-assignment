@@ -1,7 +1,7 @@
-import React from "react";
+import { createElement } from "react";
 
 function ProfileEdit() {
-  return React.createElement("img", {
+  return createElement("img", {
     className: "profile-edit-icon",
     src: "/src/icon.svg",
     alt: "",

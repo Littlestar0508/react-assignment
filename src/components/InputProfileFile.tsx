@@ -1,7 +1,7 @@
-import React from "react";
+import { createElement } from "react";
 
 function InputProfileFile(props: { changeImage: () => void }) {
-  return React.createElement("input", {
+  return createElement("input", {
     className: "input-profile-file",
     id: "select-img",
     type: "file",

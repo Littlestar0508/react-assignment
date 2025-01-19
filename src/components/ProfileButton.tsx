@@ -1,8 +1,8 @@
-import React from "react";
+import { createElement } from "react";
 import ProfileEdit from "./ProfileEdit.tsx";
 
 function ProfileButton(props: { editProfile: () => void }) {
-  return React.createElement(
+  return createElement(
     "button",
     {
       type: "button",
@@ -12,7 +12,7 @@ function ProfileButton(props: { editProfile: () => void }) {
         props.editProfile();
       },
     },
-    React.createElement(ProfileEdit)
+    createElement(ProfileEdit)
   );
 }
 

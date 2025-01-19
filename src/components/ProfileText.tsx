@@ -1,7 +1,7 @@
-import React from "react";
+import { createElement } from "react";
 
 function ProfileText() {
-  return React.createElement("input", {
+  return createElement("input", {
     className: "add-profile-text",
     type: "text",
     placeholder: "프로필 편집",
