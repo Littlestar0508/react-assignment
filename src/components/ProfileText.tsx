@@ -1,4 +1,4 @@
-import React from "../lib/react.js";
+import React from "react";
 
 function ProfileText() {
   return React.createElement("input", {

@@ -1,4 +1,4 @@
-import React from "../lib/react.js";
+import React from "react";
 import ProfileButton from "./ProfileButton.tsx";
 import ProfileText from "./ProfileText.tsx";
 import InputProfileFile from "./InputProfileFile.tsx";

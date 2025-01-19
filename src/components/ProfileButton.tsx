@@ -1,4 +1,4 @@
-import React from "../lib/react.js";
+import React from "react";
 import ProfileEdit from "./ProfileEdit.tsx";
 
 function ProfileButton(props: { editProfile: () => void }) {

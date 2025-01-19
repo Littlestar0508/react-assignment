@@ -1,8 +1,10 @@
 import Wrapper from "../components/Wrapper";
-import ReactDOM from "../lib/react-dom/client.js";
-import React from "../lib/react.js";
+import ReactDOM from "react-dom/client";
+import React from "react";
 
-const ReactDOMRoot = ReactDOM.createRoot(document.getElementById("react"));
+const ReactDOMRoot = ReactDOM.createRoot(
+  document.getElementById("react") as HTMLDivElement
+);
 
 // input[type='file'] 설정 : 이미지 사용자의 개인 장소에서 가져오기
 function changeImage() {

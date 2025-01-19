@@ -1,4 +1,4 @@
-import React from "../lib/react.js";
+import React from "react";
 
 function ProfileEdit() {
   return React.createElement("img", {
