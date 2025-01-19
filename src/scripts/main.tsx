@@ -1,6 +1,7 @@
 import Wrapper from "../components/Wrapper";
 import ReactDOM from "react-dom/client";
-import React from "react";
+import { createElement } from "react";
+import "../styles/main.css";
 
 const ReactDOMRoot = ReactDOM.createRoot(
   document.getElementById("react") as HTMLDivElement
@@ -50,9 +51,7 @@ function editProfile() {
 
 // Actual DOM에 렌더링
 function render() {
-  ReactDOMRoot.render(
-    React.createElement(Wrapper, { editProfile, changeImage })
-  );
+  ReactDOMRoot.render(createElement(Wrapper, { editProfile, changeImage }));
 }
 
 render();
