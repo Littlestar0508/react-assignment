@@ -1,0 +1,4 @@
+@layer base, components;
+
+@import "./base/Reset.css" layer(base);
+@import "./components/ProfileComponent.css" layer(components);
