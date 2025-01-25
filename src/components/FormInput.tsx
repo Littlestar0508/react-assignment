@@ -1,9 +1,9 @@
 import { ComponentProps, useId } from 'react';
 
-interface FormInputType {
+type FormInputType = ComponentProps<'input'> & {
   label: string;
   placeholder?: string;
-}
+};
 
 export default function FormInput({ label, ...restProps }: FormInputType) {
   const inputId = useId();
