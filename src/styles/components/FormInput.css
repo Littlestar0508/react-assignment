@@ -21,4 +21,20 @@ input {
   padding-block: 0.75rem;
   border: none;
   border-bottom: 1px solid #d9d9de;
+  width: 100%;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.control-visible {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%);
 }

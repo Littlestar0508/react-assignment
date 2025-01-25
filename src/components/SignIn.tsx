@@ -4,7 +4,7 @@ import SubmitButton from './SubmitButton';
 
 export default function SignIn() {
   return (
-    <form>
+    <form id="sign-in-form">
       <FormInput label="이메일" placeholder="user@company.io" type="email" />
       <FormInput
         label="패스워드"

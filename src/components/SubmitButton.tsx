@@ -9,5 +9,9 @@ export default function SubmitButton({
   label,
   ...restProps
 }: SubmitButtonType) {
-  return <button {...restProps}>{label}</button>;
+  return (
+    <button className="submit-form" {...restProps}>
+      {label}
+    </button>
+  );
 }
