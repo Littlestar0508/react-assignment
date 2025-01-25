@@ -1,0 +1,15 @@
+button {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-block: 0.75rem;
+  width: 75%;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+  background-color: #3578ff;
+  border: none;
+  border-radius: 9999px;
+  color: white;
+  cursor: pointer;
+}

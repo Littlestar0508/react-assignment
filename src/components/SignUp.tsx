@@ -1,5 +1,6 @@
 import FormInput from './FormInput';
 import '../styles/components/SignUpIn.css';
+import SubmitButton from './SubmitButton';
 
 export default function SignUp() {
   return (
@@ -24,6 +25,7 @@ export default function SignUp() {
         placeholder="입력한 패스워드 다시 입력"
         type="password"
       ></FormInput>
+      <SubmitButton label="회원가입" type="submit" />
     </form>
   );
 }

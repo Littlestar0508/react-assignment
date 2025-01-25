@@ -1,4 +1,6 @@
 form {
+  position: relative;
+  min-width: 20.75rem;
   width: 30vw;
   margin-inline: auto;
   margin-bottom: 50px;
