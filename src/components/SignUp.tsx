@@ -2,6 +2,8 @@ import FormInput from './FormInput';
 import '../styles/components/SignUpIn.css';
 import SubmitButton from './SubmitButton';
 
+const END_POINT = 'http://localhost:3000/react-assignment';
+
 export default function SignUp() {
   return (
     <form id="sign-up-form">

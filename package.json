@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "eslint": "^9.18.0",
+    "pocketbase": "^0.25.1",
     "react": "19",
     "react-dom": "19"
   }
 }
-
