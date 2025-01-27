@@ -17,6 +17,7 @@ export default function CoupangButton({
         className={
           color === 'basic' ? 'btn--gray coupangBtn' : 'btn--blue coupangBtn'
         }
+        {...restProps}
       >
         {label}
       </button>
