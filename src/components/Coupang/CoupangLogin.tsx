@@ -28,7 +28,19 @@ export default function CoupangLogin() {
           <img src="src/findRegister.svg" alt=""></img>
         </a>
       </div>
-      <CoupangButton></CoupangButton>
+      <CoupangButton label="로그인" type="submit" color="blue"></CoupangButton>
+      <hr
+        style={{
+          border: '1px solid #CCCCCC',
+          width: '30vw',
+          marginBlock: '1.375rem',
+        }}
+      />
+      <CoupangButton
+        label="회원가입"
+        type="button"
+        color="basic"
+      ></CoupangButton>
     </form>
   );
 }

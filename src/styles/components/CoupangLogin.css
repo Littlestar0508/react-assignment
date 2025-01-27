@@ -3,6 +3,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  min-width: 576px;
 }
 
 .coupangInput {
@@ -45,6 +46,7 @@
   flex-direction: row;
   width: 30%;
   margin-inline: auto;
+  margin-block-end: 1rem;
   justify-content: space-between;
   align-items: center;
 
@@ -80,5 +82,28 @@ input[type='checkbox'] {
     border: 1px solid black;
     background: url('src/checked.svg') no-repeat;
     background-position: center center;
+  }
+}
+
+.coupangBtn {
+  cursor: pointer;
+  width: 30%;
+  box-sizing: border-box;
+  margin-inline: auto;
+  padding-block: 1.25rem;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
+  font-size: 1.125rem;
+  font-weight: 700;
+
+  &.btn--blue {
+    background-color: #0074e9;
+    color: #fff;
+  }
+
+  &.btn--gray {
+    background: #fff;
+    color: #0074e9;
   }
 }
