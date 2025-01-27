@@ -1,8 +1,15 @@
 import '../../styles/components/CoupangLogin.css';
 import CoupangInput from './CoupangInput';
 import CoupangButton from './CoupangButton';
+import { useState } from 'react';
 
 export default function CoupangLogin() {
+  const [controlPasswordVisible, setControlPasswordVisible] =
+    useState<boolean>(false);
+
+  const handlePasswordVisible = () => {
+    setControlPasswordVisible(!controlPasswordVisible);
+  };
   return (
     <form className="CoupangForm">
       <button type="button" aria-label="쿠팡 홈으로" className="homeBtn">
@@ -17,6 +24,8 @@ export default function CoupangLogin() {
         placeholder="비밀번호"
         type="password"
         label="비밀번호"
+        isPasswordVisible={controlPasswordVisible}
+        onClick={handlePasswordVisible}
       ></CoupangInput>
       <div className="login-option">
         <div className="auto-login">

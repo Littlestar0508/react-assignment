@@ -107,3 +107,44 @@ input[type='checkbox'] {
     color: #0074e9;
   }
 }
+
+.coupangInputContainer {
+  position: relative;
+  margin-inline: auto;
+  width: 30%;
+
+  .coupangInput {
+    box-sizing: border-box;
+    margin-inline: auto;
+    border: 1px solid #aaa9a9;
+    padding-block: 20px;
+    padding-inline-start: 3.5rem;
+    margin-block-end: 1.25rem;
+    width: 100%;
+    height: 50px;
+
+    &::placeholder {
+      color: #929292;
+    }
+  }
+
+  img {
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    padding: 1.0625rem 0.78125rem;
+    border-inline-end: 1px solid #cccccc;
+  }
+
+  .show-password {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 30px;
+    img {
+      border: none;
+    }
+  }
+}
