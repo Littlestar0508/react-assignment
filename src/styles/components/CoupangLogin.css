@@ -1,7 +1,12 @@
 .CoupangForm {
-  border: 1px solid blue;
+  height: 100vh;
+  width: 100vw;
 }
 
 .test {
-  border: 1px solid blue;
+}
+
+.coupangLogo {
+  display: block;
+  margin-inline: auto;
 }
