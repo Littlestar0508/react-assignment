@@ -15,6 +15,7 @@ export default function SignIn() {
       const email = formData.get('useremail')?.toString();
       const password = formData.get('userpassword')?.toString();
 
+      // 모두 입력하지 않았다면 통신X
       if (!email || !password) {
         alert('이메일과 비밀번호를 모두 입력해주시기 바랍니다');
         return;
@@ -38,6 +39,7 @@ export default function SignIn() {
   };
 
   return (
+    // React19 form[action] 을 통한 작동
     <form id="sign-in-form" action={handleSignIn}>
       <FormInput
         label="이메일"

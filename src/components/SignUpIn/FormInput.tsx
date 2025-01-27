@@ -1,14 +1,17 @@
 import { ComponentProps, useId, useState } from 'react';
 import '../../styles/components/FormInput.css';
 
+// input태그에서 사용되는 속성만 props로 전달받기 위해 ComponentProps사용
 type FormInputType = ComponentProps<'input'> & {
   label: string;
   placeholder?: string;
 };
 
 export default function FormInput({ label, ...restProps }: FormInputType) {
+  // 비밀번호 아이콘 클릭 시 type 변경하는 useState
   const [visible, setVisible] = useState(false);
   const inputId = useId();
+  // password 타입이라면 icon을 렌더링 하기 위한 변수
   let isPasswordType: boolean;
 
   if (restProps.type === 'password') {
@@ -25,6 +28,7 @@ export default function FormInput({ label, ...restProps }: FormInputType) {
     <div className="input-container">
       <label htmlFor={inputId}>{label}</label>
       <div className="input-field">
+        {/* type['password']에 따라 조건부 렌더링 */}
         {isPasswordType ? (
           <>
             <input

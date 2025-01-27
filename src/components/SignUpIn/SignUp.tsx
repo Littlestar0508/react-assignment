@@ -11,24 +11,30 @@ const pb = new PocketBase(END_POINT);
 export default function SignUp() {
   const handleSignUp = async (formData: FormData) => {
     try {
+      // formData에서 signupform data를 가져와서 구조분해 할당
       const [signupname, signupemail, signuppwd, signuppwdchk] =
         formData.getAll('signupform');
 
+      // 만약 모두 입력하지 않았다면 통신X
       if (!signupname || !signupemail || !signuppwd || !signuppwdchk) {
         alert('모두 작성해주시기 바랍니다');
         return;
       }
 
+      // 비밀번호가 일치하지 않는다면 통신X
       if (signuppwd !== signuppwdchk) {
         alert('비밀번호를 다시 확인해주시기 바랍니다');
         return;
       }
 
+      // 회원가입 데이터
       const signUpData = {
+        // formData
         password: String(signuppwd),
         passwordConfirm: String(signuppwdchk),
         name: String(signupname),
         email: String(signupemail),
+        // dummy data
         userid: 'test',
         emailVisibility: true,
         address: 'test',
@@ -45,6 +51,7 @@ export default function SignUp() {
   };
 
   return (
+    // React19 form[action] 을 통한 작동
     <form id="sign-up-form" action={handleSignUp}>
       <FormInput
         label="이름"
