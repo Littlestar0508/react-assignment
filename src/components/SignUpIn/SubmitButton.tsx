@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react';
-import '../styles/components/SubmitButton.css';
+import '../../styles/components/SubmitButton.css';
 
 type SubmitButtonType = ComponentProps<'button'> & {
   label: string;

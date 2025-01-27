@@ -1,5 +1,5 @@
 import FormInput from './FormInput';
-import '../styles/components/SignUpIn.css';
+import '../../styles/components/SignUpIn.css';
 import SubmitButton from './SubmitButton';
 import PocketBase from 'pocketbase';
 

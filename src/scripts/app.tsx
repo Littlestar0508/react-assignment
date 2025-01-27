@@ -1,5 +1,5 @@
-import SignIn from '../components/SignIn';
-import SignUp from '../components/SignUp';
+import SignIn from '../components/SignUpIn/SignIn';
+import SignUp from '../components/SignUpIn/SignUp';
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 
