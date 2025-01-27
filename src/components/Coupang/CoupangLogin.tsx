@@ -24,8 +24,10 @@ export default function CoupangLogin() {
 
       const data = await pb
         .collection('users')
-        .getFirstListItem(`email=${email}`);
-      alert('환영합니다!');
+        .getFirstListItem(`email="${email}"`);
+      alert(`환영합니다! ${data.name}님!`);
+      // 페이지 이동을 해야되지만 현재 구현한 페이지가 없어 버튼을 원래의 상태로 되돌리는 작업
+      setButtonActivate(false);
     } catch (err) {
       alert('비정상적인 접근입니다');
     }
