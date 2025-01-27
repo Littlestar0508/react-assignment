@@ -19,12 +19,22 @@ export default function CoupangInput({
       <label htmlFor={inputId} className="sr-only">
         {label}
       </label>
-      <input
-        className="coupangInput"
-        id={inputId}
-        type={restProps.type}
-        {...restProps}
-      />
+      {restProps.type !== 'password' ? (
+        <input
+          className="coupangInput"
+          id={inputId}
+          type={restProps.type}
+          {...restProps}
+        />
+      ) : (
+        <input
+          className="coupangInput"
+          id={inputId}
+          {...restProps}
+          type={isPasswordVisible ? 'text' : 'password'}
+        />
+      )}
+
       {restProps.type !== 'password' ? (
         <img src="src/emailIcon.svg" alt="" />
       ) : (
