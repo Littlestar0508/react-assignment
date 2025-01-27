@@ -1,5 +1,8 @@
 import { ComponentProps, useId } from 'react';
 
+// 부모에게서 비밀번호의 노출 여부를 결정하는 boolean값을 받아오도록 설정
+// 그리고 제어하는 함수도 부모에게서 할당
+// error를 통해 이메일 validation에러를 표시
 type CoupangInputType = ComponentProps<'input'> & {
   label: string;
   isPasswordVisible?: boolean;
@@ -18,9 +21,11 @@ export default function CoupangInput({
 
   return (
     <div className="coupangInputContainer">
+      {/* input태그는 있으나 label은 화면상 보이지 않아 sr-only로 처리(스크린 리더가 읽을 수 있도록) */}
       <label htmlFor={inputId} className="sr-only">
         {label}
       </label>
+      {/* type에 따라 렌더링 다르게 표시  */}
       {restProps.type !== 'password' ? (
         <>
           <input
@@ -53,11 +58,14 @@ export default function CoupangInput({
         />
       )}
 
+      {/* type에 따라 input태그 왼쪽에 있는 이미지를 다르게 설정 */}
+      {/* 이미지의 정보는 읽을 필요 없다 생각해 alt텍스트를 공백으로 표기 */}
       {restProps.type !== 'password' ? (
         <img src="src/emailIcon.svg" alt="" />
       ) : (
         <>
           <img src="src/passwordIcon.svg" alt="" />
+          {/* 버튼에 이벤트를 할당해 비밀번호의 타입 변경 */}
           <button type="button" className="show-password" onClick={onClick}>
             {isPasswordVisible ? (
               <img src="src/non-visible.svg" alt="" />
