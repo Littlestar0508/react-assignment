@@ -13,6 +13,7 @@ export default function CoupangLogin() {
     useState<boolean>(false);
   const [buttonActivate, setButtonActivate] = useState<boolean>(false);
   const [errorEmail, setErrorEmail] = useState<boolean>(false);
+  const [saveLogin, setSaveLogin] = useState<boolean>(true);
 
   const handlePasswordVisible = () => {
     setControlPasswordVisible(!controlPasswordVisible);
@@ -76,13 +77,22 @@ export default function CoupangLogin() {
       ></CoupangInput>
       <div className="login-option">
         <div className="auto-login">
-          <input type="checkbox" id="auto-login" />
+          <input
+            type="checkbox"
+            id="auto-login"
+            defaultChecked={!saveLogin}
+            onChange={() => setSaveLogin(!saveLogin)}
+          />
           <label htmlFor="auto-login">자동 로그인</label>
         </div>
         <a href="/">
           아이디(이메일)/비밀번호 찾기
           <img src="src/findRegister.svg" alt=""></img>
         </a>
+      </div>
+      <div className="saveLoginInfo" hidden={saveLogin}>
+        <div></div>
+        <p>개인 정보 보호를 위해 본인 기기에서만 이용해주세요</p>
       </div>
       <CoupangButton
         label="로그인"
