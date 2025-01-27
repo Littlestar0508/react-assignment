@@ -132,12 +132,17 @@ input[type='checkbox'] {
     &::placeholder {
       color: #929292;
     }
+
+    &.errorMessage {
+      border: 2px solid #e52528;
+    }
   }
 
   img {
     width: 20px;
     height: 16px;
     position: absolute;
+    top: 0;
     left: 0;
     padding: 1.0625rem 0.78125rem;
     border-inline-end: 1px solid #cccccc;

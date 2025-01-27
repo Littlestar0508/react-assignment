@@ -12,15 +12,24 @@ export default function CoupangLogin() {
   const [controlPasswordVisible, setControlPasswordVisible] =
     useState<boolean>(false);
   const [buttonActivate, setButtonActivate] = useState<boolean>(false);
+  const [errorEmail, setErrorEmail] = useState<boolean>(false);
 
   const handlePasswordVisible = () => {
     setControlPasswordVisible(!controlPasswordVisible);
   };
 
   const handleCoupangLogin = async (formData: FormData) => {
+    setErrorEmail(false);
     try {
       const email = String(formData.get('useremail'));
       const password = String(formData.get('userpassword'));
+
+      const regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+
+      if (!regEmail.test(email)) {
+        setErrorEmail(true);
+        return;
+      }
 
       const data = await pb
         .collection('users')
@@ -49,6 +58,7 @@ export default function CoupangLogin() {
         <img src="src/CoupangLogo.svg" className="coupangLogo" alt="" />
       </button>
       <CoupangInput
+        error={errorEmail}
         placeholder="아이디(이메일)"
         type="text"
         label="아이디 또는 이메일"
