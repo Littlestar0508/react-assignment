@@ -1,12 +1,84 @@
 .CoupangForm {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
-.test {
-}
-
-.coupangLogo {
-  display: block;
+.coupangInput {
+  box-sizing: border-box;
+  width: 30%;
   margin-inline: auto;
+  border: 1px solid #cccccc;
+  padding-block: 0.875rem;
+  padding-inline-start: 0.875rem;
+  margin-block-end: 1.25rem;
+
+  &::placeholder {
+    color: #929292;
+  }
+}
+
+.homeBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-inline: auto;
+  margin-block-start: 14.75rem;
+  margin-block-end: 3rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.login-option {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: #0074e9;
+    text-decoration: none;
+  }
+  .auto-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  cursor: pointer;
+  background-clip: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid black;
+
+  &:checked {
+    accent-color: white;
+    border: 1px solid black;
+    background: url('src/checked.svg') no-repeat;
+    background-position: center center;
+  }
 }
