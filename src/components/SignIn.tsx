@@ -10,13 +10,13 @@ const pb = new PocketBase(END_POINT);
 
 export default function SignIn() {
   // PocketBase로 이메일만 통신(비밀번호 체크X)
-  const handleLogin = async (formData: FormData) => {
+  const handleSignIn = async (formData: FormData) => {
     try {
       const email = formData.get('useremail')?.toString();
       const password = formData.get('userpassword')?.toString();
 
       if (!email || !password) {
-        alert('경고');
+        alert('이메일과 비밀번호를 모두 입력해주시기 바랍니다');
         return;
       }
       // 정상적인 통신을 하였다면 data에 통신 값을 저장
@@ -38,7 +38,7 @@ export default function SignIn() {
   };
 
   return (
-    <form id="sign-in-form" action={handleLogin}>
+    <form id="sign-in-form" action={handleSignIn}>
       <FormInput
         label="이메일"
         placeholder="user@company.io"
