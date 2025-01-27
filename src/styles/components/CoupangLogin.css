@@ -100,6 +100,12 @@ input[type='checkbox'] {
   &.btn--blue {
     background-color: #0074e9;
     color: #fff;
+
+    &:disabled {
+      background-color: #97aabd;
+      color: #d4e0ed;
+      cursor: not-allowed;
+    }
   }
 
   &.btn--gray {

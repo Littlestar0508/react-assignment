@@ -11,6 +11,7 @@ const pb = new PocketBase(END_POINT);
 export default function CoupangLogin() {
   const [controlPasswordVisible, setControlPasswordVisible] =
     useState<boolean>(false);
+  const [buttonActivate, setButtonActivate] = useState<boolean>(false);
 
   const handlePasswordVisible = () => {
     setControlPasswordVisible(!controlPasswordVisible);
@@ -30,6 +31,16 @@ export default function CoupangLogin() {
     }
   };
 
+  const handleButtonActivate = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const list: NodeListOf<HTMLInputElement> =
+      document.querySelectorAll('.coupangInput');
+    if (list[0].value.length > 0 && list[1].value.length > 0) {
+      setButtonActivate(true);
+    } else {
+      setButtonActivate(false);
+    }
+  };
+
   return (
     <form className="CoupangForm" action={handleCoupangLogin}>
       <button type="button" aria-label="쿠팡 홈으로" className="homeBtn">
@@ -40,6 +51,7 @@ export default function CoupangLogin() {
         type="text"
         label="아이디 또는 이메일"
         name="useremail"
+        onChange={handleButtonActivate}
       ></CoupangInput>
       <CoupangInput
         placeholder="비밀번호"
@@ -47,6 +59,7 @@ export default function CoupangLogin() {
         label="비밀번호"
         isPasswordVisible={controlPasswordVisible}
         onClick={handlePasswordVisible}
+        onChange={handleButtonActivate}
         name="userpassword"
       ></CoupangInput>
       <div className="login-option">
@@ -59,7 +72,12 @@ export default function CoupangLogin() {
           <img src="src/findRegister.svg" alt=""></img>
         </a>
       </div>
-      <CoupangButton label="로그인" type="submit" color="blue"></CoupangButton>
+      <CoupangButton
+        label="로그인"
+        type="submit"
+        color="blue"
+        disabled={!buttonActivate}
+      ></CoupangButton>
       <hr
         style={{
           border: '1px solid #CCCCCC',
