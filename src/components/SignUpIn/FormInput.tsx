@@ -26,7 +26,9 @@ export default function FormInput({ label, ...restProps }: FormInputType) {
 
   return (
     <div className="input-container">
-      <label htmlFor={inputId}>{label}</label>
+      <label htmlFor={inputId} className="signUpInLabel">
+        {label}
+      </label>
       <div className="input-field">
         {/* type['password']에 따라 조건부 렌더링 */}
         {isPasswordType ? (
@@ -35,6 +37,7 @@ export default function FormInput({ label, ...restProps }: FormInputType) {
               {...restProps}
               id={inputId}
               type={visible ? 'text' : 'password'}
+              className="SignUpInInput"
             />
             <button
               className="control-visible"
@@ -84,7 +87,7 @@ export default function FormInput({ label, ...restProps }: FormInputType) {
             </button>
           </>
         ) : (
-          <input {...restProps} id={inputId} />
+          <input {...restProps} id={inputId} className="SignUpInInput" />
         )}
       </div>
     </div>

@@ -6,7 +6,7 @@
   gap: 0.5rem;
 }
 
-label {
+.signUpInLabel {
   color: #26262c;
   font-size: 1rem;
   font-weight: bold;
@@ -16,7 +16,7 @@ label {
   }
 }
 
-input {
+.SignUpInInput {
   font-size: 0.875rem;
   padding-block: 0.75rem;
   border: none;

@@ -40,7 +40,7 @@ export default function SignIn() {
 
   return (
     // React19 form[action] 을 통한 작동
-    <form id="sign-in-form" action={handleSignIn}>
+    <form id="sign-in-form" action={handleSignIn} className="SignUpIn">
       <FormInput
         label="이메일"
         placeholder="user@company.io"

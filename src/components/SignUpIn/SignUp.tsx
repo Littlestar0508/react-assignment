@@ -52,7 +52,7 @@ export default function SignUp() {
 
   return (
     // React19 form[action] 을 통한 작동
-    <form id="sign-up-form" action={handleSignUp}>
+    <form id="sign-up-form" action={handleSignUp} className="SignUpIn">
       <FormInput
         label="이름"
         placeholder="2글자 이상 입력"

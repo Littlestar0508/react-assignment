@@ -1,0 +1,13 @@
+import '../../styles/components/CoupangLogin.css';
+import CoupangInput from './CoupangInput';
+import CoupangButton from './CoupangButton';
+
+export default function CoupangLogin() {
+  return (
+    <form className="CoupangForm">
+      <CoupangButton></CoupangButton>
+      <CoupangInput></CoupangInput>
+      <input type="text" placeholder="테스트" className="test" />
+    </form>
+  );
+}
