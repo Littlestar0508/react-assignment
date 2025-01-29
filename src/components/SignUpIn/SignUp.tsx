@@ -32,7 +32,7 @@ export default function SignUp() {
         name: signupname,
         email: signupemail,
         // dummy data
-        userid: 'test',
+        userid: crypto.randomUUID(),
         emailVisibility: true,
         address: 'test',
         phoneNumber: 1046784518,
