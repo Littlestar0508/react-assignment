@@ -1,5 +1,6 @@
 {
   "private": "true",
+  "type": "module",
   "name": "react-assignment",
   "version": "1.0.0",
   "description": "react 학습 후 과제를 수행하는 레포지토리",
@@ -13,18 +14,22 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint --cache 'src/**/*.{ts,tsx}'",
+    "lint": "eslint --cache src/**/*.{ts,tsx} src/**/**/*.{ts,tsx}",
     "format": "prettier --cache 'src/**/*.{ts,tsx}'"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0",
     "vite": "^6.0.7"
   },
   "dependencies": {
@@ -34,3 +39,4 @@
     "react-dom": "19"
   }
 }
+
