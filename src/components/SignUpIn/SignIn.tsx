@@ -1,12 +1,9 @@
 import FormInput from './FormInput';
 import '../../styles/components/SignUpIn.css';
 import SubmitButton from './SubmitButton';
-import PocketBase from 'pocketbase';
+import pb from '../../lib/pocketbase';
 
 // PocketBase를 통한 통신 구성
-const END_POINT = 'https://teamproject.pockethost.io';
-
-const pb = new PocketBase(END_POINT);
 
 export default function SignIn() {
   // PocketBase로 이메일만 통신(비밀번호 체크X)

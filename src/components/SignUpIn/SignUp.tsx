@@ -1,12 +1,9 @@
 import '../../styles/components/SignUpIn.css';
 import FormInput from './FormInput';
 import SubmitButton from './SubmitButton';
-import PocketBase from 'pocketbase';
+import pb from '../../lib/pocketbase';
 
 // PocketBase를 통한 통신 구성
-const END_POINT = 'https://teamproject.pockethost.io';
-
-const pb = new PocketBase(END_POINT);
 
 export default function SignUp() {
   const handleSignUp = async (formData: FormData) => {

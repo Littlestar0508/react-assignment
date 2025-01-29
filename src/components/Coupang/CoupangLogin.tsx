@@ -2,11 +2,7 @@ import '../../styles/components/CoupangLogin.css';
 import CoupangInput from './CoupangInput';
 import CoupangButton from './CoupangButton';
 import { useState } from 'react';
-import PocketBase from 'pocketbase';
-
-const END_POINT = 'https://teamproject.pockethost.io';
-
-const pb = new PocketBase(END_POINT);
+import pb from '../../lib/pocketbase';
 
 export default function CoupangLogin() {
   // 비밀번호 노출 여부
