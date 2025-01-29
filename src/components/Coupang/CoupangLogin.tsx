@@ -79,7 +79,7 @@ export default function CoupangLogin() {
         label="아이디 또는 이메일"
         name="useremail"
         onChange={handleButtonActivate}
-      ></CoupangInput>
+      />
       <CoupangInput
         placeholder="비밀번호"
         type="password"
@@ -88,7 +88,7 @@ export default function CoupangLogin() {
         onClick={handlePasswordVisible}
         onChange={handleButtonActivate}
         name="userpassword"
-      ></CoupangInput>
+      />
       <div className="login-option">
         <div className="auto-login">
           <input
@@ -115,7 +115,7 @@ export default function CoupangLogin() {
         type="submit"
         color="blue"
         disabled={!buttonActivate}
-      ></CoupangButton>
+      />
       {/* 구분선 */}
       <hr
         style={{
@@ -124,11 +124,7 @@ export default function CoupangLogin() {
           marginBlock: '1.375rem',
         }}
       />
-      <CoupangButton
-        label="회원가입"
-        type="button"
-        color="basic"
-      ></CoupangButton>
+      <CoupangButton label="회원가입" type="button" color="basic" />
     </form>
   );
 }

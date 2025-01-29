@@ -52,7 +52,7 @@ export default function SignIn() {
         placeholder="숫자, 영문 조합 6자리 이상 입력"
         type="password"
         name="userpassword"
-      ></FormInput>
+      />
       <SubmitButton label="로그인" type="submit" />
     </form>
   );

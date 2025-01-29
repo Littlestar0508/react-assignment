@@ -9,9 +9,9 @@ const root = document.getElementById('react');
 if (root) {
   createRoot(root).render(
     <StrictMode>
-      <CoupangLogin></CoupangLogin>
-      <SignIn></SignIn>
-      <SignUp></SignUp>
+      <CoupangLogin />
+      <SignIn />
+      <SignUp />
     </StrictMode>
   );
 }
