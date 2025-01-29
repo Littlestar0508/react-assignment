@@ -102,12 +102,12 @@ export default function CoupangLogin() {
         {/* 링크 이동X */}
         <a href="/">
           아이디(이메일)/비밀번호 찾기
-          <img src="src/findRegister.svg" alt=""></img>
+          <img src="src/findRegister.svg" alt="" />
         </a>
       </div>
       {/* 자동 로그인 안내 메세지 */}
       <div className="saveLoginInfo" hidden={saveLogin}>
-        <div></div>
+        <div />
         <p>개인 정보 보호를 위해 본인 기기에서만 이용해주세요</p>
       </div>
       <CoupangButton

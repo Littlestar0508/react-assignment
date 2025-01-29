@@ -59,7 +59,7 @@ export default function CoupangInput({
       )}
 
       {/* type에 따라 input태그 왼쪽에 있는 이미지를 다르게 설정 */}
-      {/* 이미지의 정보는 읽을 필요 없다 생각해 alt텍스트를 공백으로 표기 */}
+      {/* 이미지의 정보는 읽을 필요 없다 생각해 alt텍스트를 공백으로 표기 -> 이미지 정보 텍스트 제공(현재 상태 나타냄) */}
       {restProps.type !== 'password' ? (
         <img src="src/emailIcon.svg" alt="" />
       ) : (
@@ -68,9 +68,9 @@ export default function CoupangInput({
           {/* 버튼에 이벤트를 할당해 비밀번호의 타입 변경 */}
           <button type="button" className="show-password" onClick={onClick}>
             {isPasswordVisible ? (
-              <img src="src/non-visible.svg" alt="" />
+              <img src="src/non-visible.svg" alt="비밀번호 숨김" />
             ) : (
-              <img src="src/visible.svg" />
+              <img src="src/visible.svg" alt="비밀번호 노출" />
             )}
           </button>
         </>
