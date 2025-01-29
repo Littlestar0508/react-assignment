@@ -28,26 +28,29 @@ export default function CoupangLogin() {
     setErrorEmail(false);
     try {
       // 원래는 email과 password로 login을 구현하려 했지만 email verify의 문제로 실패
-      const email = String(formData.get('useremail'));
-      const password = String(formData.get('userpassword'));
+      const email = formData.get('useremail');
+      // const password = formData.get('userpassword');
 
       // 이메일 정규 표현식([(문자+숫자)열]@[(문자+숫자)열].[문자열2자리 이상])
       const regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
 
       // 만약 정규표현식을 통과하지 못했다면 error의 여부를 true로 바꾸고 함수 종료
-      if (!regEmail.test(email)) {
+      if (email && !(email instanceof File) && !regEmail.test(email)) {
         setErrorEmail(true);
         return;
       }
 
       // formData에서 받아온 email로 통신
-      const data = await pb
-        .collection('users')
-        .getFirstListItem(`email="${email}"`);
-      alert(`환영합니다! ${data.name}님!`);
-      // 페이지 이동을 해야되지만 현재 구현한 페이지가 없어 버튼을 원래의 상태로 되돌리는 작업
-      setButtonActivate(false);
-    } catch (err) {
+
+      if (typeof email === 'string') {
+        const data = await pb
+          .collection('users')
+          .getFirstListItem(`email="${email}"`);
+        alert(`환영합니다! ${data.name}님!`);
+        // 페이지 이동을 해야되지만 현재 구현한 페이지가 없어 버튼을 원래의 상태로 되돌리는 작업
+        setButtonActivate(false);
+      }
+    } catch {
       // 통신 실패 혹은 이메일 존재X
       alert('비정상적인 접근입니다');
     }

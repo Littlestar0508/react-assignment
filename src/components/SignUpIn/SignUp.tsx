@@ -30,10 +30,10 @@ export default function SignUp() {
       // 회원가입 데이터
       const signUpData = {
         // formData
-        password: String(signuppwd),
-        passwordConfirm: String(signuppwdchk),
-        name: String(signupname),
-        email: String(signupemail),
+        password: signuppwd,
+        passwordConfirm: signuppwdchk,
+        name: signupname,
+        email: signupemail,
         // dummy data
         userid: 'test',
         emailVisibility: true,
@@ -45,7 +45,7 @@ export default function SignUp() {
 
       await pb.collection('users').create(signUpData);
       alert('회원가입이 완료되었습니다');
-    } catch (err) {
+    } catch {
       alert('올바르지 않은 통신입니다');
     }
   };
