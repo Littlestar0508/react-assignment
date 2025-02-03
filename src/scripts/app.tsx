@@ -1,6 +1,4 @@
-import SignIn from '../components/SignUpIn/SignIn';
-import SignUp from '../components/SignUpIn/SignUp';
-import CoupangLogin from '../components/Coupang/CoupangLogin';
+import CartList from '../components/Cart/CartList';
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 
@@ -9,9 +7,7 @@ const root = document.getElementById('react');
 if (root) {
   createRoot(root).render(
     <StrictMode>
-      <CoupangLogin />
-      <SignIn />
-      <SignUp />
+      <CartList />
     </StrictMode>
   );
 }
