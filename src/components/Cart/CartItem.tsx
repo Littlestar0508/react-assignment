@@ -9,6 +9,7 @@ export default function CartItem({
   count,
   id,
   index,
+  max,
   onUpdate,
 }: ItemType & {
   onUpdate: (index: number) => (newCount: number) => void;
@@ -21,7 +22,7 @@ export default function CartItem({
         <h3 className={module['item-title']}>{desc}</h3>
         <p className={module['item-desc']}>{price}</p>
       </div>
-      <IncDecComponent count={count} onUpdate={onUpdate?.(index)} />
+      <IncDecComponent count={count} onUpdate={onUpdate?.(index)} max={max} />
     </li>
   );
 }

@@ -34,6 +34,7 @@ export default function CartList() {
               count={item.count}
               key={idx}
               index={idx}
+              max={item.max}
               onUpdate={generateHandleUpdateArray}
             />
           );

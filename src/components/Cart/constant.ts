@@ -4,6 +4,7 @@ export interface ItemType {
   price: number;
   src: string;
   count: number;
+  max: number;
 }
 
 export type ItemListType = ItemType[];
@@ -15,6 +16,7 @@ export const INITIAL_ARRAY: ItemListType = [
     price: 1880,
     src: 'src/cart-item-1.png',
     count: 2,
+    max: 10,
   },
   {
     id: 'item-2',
@@ -22,6 +24,7 @@ export const INITIAL_ARRAY: ItemListType = [
     price: 1280,
     src: 'src/cart-item-2.png',
     count: 4,
+    max: 8,
   },
   {
     id: 'item-3',
@@ -29,5 +32,6 @@ export const INITIAL_ARRAY: ItemListType = [
     price: 2280,
     src: 'src/cart-item-3.png',
     count: 3,
+    max: 15,
   },
 ];
