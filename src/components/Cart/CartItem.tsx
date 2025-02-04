@@ -2,7 +2,18 @@ import module from './CartStyles.module.css';
 import IncDecComponent from './IncDecComponent';
 import { type ItemType } from './constant';
 
-export default function CartItem({ src, price, desc, count, id }: ItemType) {
+export default function CartItem({
+  src,
+  price,
+  desc,
+  count,
+  id,
+  index,
+  onUpdate,
+}: ItemType & {
+  onUpdate: (index: number) => (newCount: number) => void;
+  index: number;
+}) {
   return (
     <li className={module['li-item']} id={id}>
       <img src={src} alt="" className={module['cart-image']} />
@@ -10,7 +21,7 @@ export default function CartItem({ src, price, desc, count, id }: ItemType) {
         <h3 className={module['item-title']}>{desc}</h3>
         <p className={module['item-desc']}>{price}</p>
       </div>
-      <IncDecComponent count={count} />
+      <IncDecComponent count={count} onUpdate={onUpdate?.(index)} />
     </li>
   );
 }
