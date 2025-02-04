@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import CartItem from './CartItem';
+import CartTitle from './CartTitle';
 import module from './CartStyles.module.css';
 import { INITIAL_ARRAY } from './constant';
+import CartPrice from './CartPrice';
 
 export default function CartList() {
   const [itemArray, setItemArray] = useState(INITIAL_ARRAY);
@@ -27,6 +29,7 @@ export default function CartList() {
 
   return (
     <div className={module.container}>
+      <CartTitle />
       <ul className={module['ul-container']}>
         {itemArray.map((item, idx) => {
           return (
@@ -44,7 +47,7 @@ export default function CartList() {
           );
         })}
       </ul>
-      <div>{sumPrice.toLocaleString()}</div>
+      <CartPrice sum={sumPrice} />
     </div>
   );
 }

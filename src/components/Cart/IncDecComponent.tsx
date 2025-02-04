@@ -1,4 +1,4 @@
-import S from './CartStyles.module.css';
+import module from './CartStyles.module.css';
 import { ItemType } from './constant';
 import { useState } from 'react';
 
@@ -22,10 +22,10 @@ export default function IncDecComponent({ count, max, onUpdate }: IncDecType) {
   };
 
   return (
-    <div className={S['inc-dec-container']}>
+    <div className={module['inc-dec-container']}>
       <button
         type="button"
-        className={S['set-count']}
+        className={module['set-count']}
         onClick={handleMinusChange}
         disabled={curCount === 1 ? true : false}
         aria-disabled={curCount === 1 ? true : false}
@@ -33,11 +33,11 @@ export default function IncDecComponent({ count, max, onUpdate }: IncDecType) {
       >
         -
       </button>
-      <p className={S['item-count']}>{count}</p>
+      <p className={module['item-count']}>{count}</p>
 
       <button
         type="button"
-        className={S['set-count']}
+        className={module['set-count']}
         onClick={handlePlusChange}
         disabled={curCount === max ? true : false}
         aria-disabled={curCount === max ? true : false}
