@@ -21,6 +21,10 @@ export default function CartList() {
     setItemArray(nextArray);
   };
 
+  const sumPrice = itemArray.reduce((acc, cur) => {
+    return (acc += cur.price * cur.count);
+  }, 0);
+
   return (
     <div className={module.container}>
       <ul className={module['ul-container']}>
@@ -40,6 +44,7 @@ export default function CartList() {
           );
         })}
       </ul>
+      <div>{sumPrice.toLocaleString()}</div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function CartItem({
       <img src={src} alt="" className={module['cart-image']} />
       <div className={module['item-text']}>
         <h3 className={module['item-title']}>{desc}</h3>
-        <p className={module['item-desc']}>{price}</p>
+        <p className={module['item-desc']}>{price.toLocaleString()} 원</p>
       </div>
       <IncDecComponent count={count} onUpdate={onUpdate?.(index)} max={max} />
     </li>
