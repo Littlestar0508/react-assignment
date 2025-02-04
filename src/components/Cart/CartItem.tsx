@@ -12,6 +12,7 @@ export default function CartItem({
   max,
   onUpdate,
 }: ItemType & {
+  // onUpdate에 index를 넣어 전달한다(부모 컴포넌트에게로) -> trigger 역할
   onUpdate: (index: number) => (newCount: number) => void;
   index: number;
 }) {
@@ -22,6 +23,7 @@ export default function CartItem({
         <h3 className={module['item-title']}>{desc}</h3>
         <p className={module['item-desc']}>{price.toLocaleString()} 원</p>
       </div>
+      {/* 상태를 변경하기 위해 newCount를 받아와야한다 */}
       <IncDecComponent count={count} onUpdate={onUpdate?.(index)} max={max} />
     </li>
   );

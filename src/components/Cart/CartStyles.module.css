@@ -89,6 +89,7 @@
   cursor: pointer;
   margin-bottom: 0.125rem;
 
+  /* 극단적으로 disabled를 나타내고자 글자색상과 pointer를 제거하였다 */
   &:disabled {
     color: transparent;
     cursor: unset;
@@ -110,6 +111,7 @@
   font-size: 1.25rem;
   height: 44px;
 
+  /* 화면의 틀이 변형되지 않도록 가격을 나타내는 숫자의 너비를 지정하였다 */
   span {
     &:nth-child(2) {
       width: 100px;

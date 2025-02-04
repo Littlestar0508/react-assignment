@@ -9,12 +9,14 @@ type IncDecType = Pick<ItemType, 'count' | 'max'> & {
 export default function IncDecComponent({ count, max, onUpdate }: IncDecType) {
   const [curCount, setCurCount] = useState(count);
 
+  // 덧셈 로직
   const handlePlusChange = () => {
     const nextCount = curCount + 1;
     setCurCount(nextCount);
     onUpdate?.(nextCount);
   };
 
+  // 뺄셈 로직
   const handleMinusChange = () => {
     const nextCount = curCount - 1;
     setCurCount(nextCount);
@@ -27,6 +29,7 @@ export default function IncDecComponent({ count, max, onUpdate }: IncDecType) {
         type="button"
         className={module['set-count']}
         onClick={handleMinusChange}
+        // 현재 값이 1이라면 disabled 적용
         disabled={curCount === 1 ? true : false}
         aria-disabled={curCount === 1 ? true : false}
         aria-label="감소 버튼"
@@ -39,6 +42,7 @@ export default function IncDecComponent({ count, max, onUpdate }: IncDecType) {
         type="button"
         className={module['set-count']}
         onClick={handlePlusChange}
+        // 현재 값이 max와 일치한다면 disabled 적용
         disabled={curCount === max ? true : false}
         aria-disabled={curCount === max ? true : false}
         aria-label="증가 버튼"

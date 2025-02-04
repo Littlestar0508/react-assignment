@@ -9,6 +9,7 @@ export interface ItemType {
 
 export type ItemListType = ItemType[];
 
+// 상태의 초기값을 설정하기 위한 배열상수이다
 export const INITIAL_ARRAY: ItemListType = [
   {
     id: 'item-1',
