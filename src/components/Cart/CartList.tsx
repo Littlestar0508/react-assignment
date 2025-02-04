@@ -9,9 +9,11 @@ export default function CartList() {
         {INITIAL_ARRAY.map((item, idx) => {
           return (
             <CartItem
+              id={item.id}
               src={item.src}
               price={item.price}
               desc={item.desc}
+              count={item.count}
               key={idx}
             />
           );
