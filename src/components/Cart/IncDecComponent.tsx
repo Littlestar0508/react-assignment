@@ -28,6 +28,8 @@ export default function IncDecComponent({ count, max, onUpdate }: IncDecType) {
         className={S['set-count']}
         onClick={handleMinusChange}
         disabled={curCount === 1 ? true : false}
+        aria-disabled={curCount === 1 ? true : false}
+        aria-label="감소 버튼"
       >
         -
       </button>
@@ -38,6 +40,8 @@ export default function IncDecComponent({ count, max, onUpdate }: IncDecType) {
         className={S['set-count']}
         onClick={handlePlusChange}
         disabled={curCount === max ? true : false}
+        aria-disabled={curCount === max ? true : false}
+        aria-label="증가 버튼"
       >
         +
       </button>

@@ -63,6 +63,11 @@
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 0.125rem;
+
+  &:disabled {
+    color: transparent;
+    cursor: unset;
+  }
 }
 
 .item-count {
