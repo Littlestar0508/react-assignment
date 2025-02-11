@@ -1,3 +1,11 @@
+import MusicCard from './components/MusicCard';
+import MusicSearchForm from './components/MusicSearchForm';
+
 export default function SearchMusicUI() {
-  return <div>ㅎㅇ</div>;
+  return (
+    <>
+      <MusicCard />
+      <MusicSearchForm />
+    </>
+  );
 }
