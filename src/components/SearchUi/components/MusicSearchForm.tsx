@@ -1,7 +1,19 @@
 import module from '../styles/MusicSearchStyle.module.css';
 import { IoIosSearch } from 'react-icons/io';
 
-export default function MusicSearchForm() {
+interface MusicSearchFormType {
+  defaultValue: string;
+  onUpdate: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function MusicSearchForm({
+  defaultValue,
+  onUpdate,
+}: MusicSearchFormType) {
+  const handleChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onUpdate(e.currentTarget.value);
+  };
+
   return (
     <form className={module['music-search-container']}>
       <label htmlFor="music-search" className="sr-only">
@@ -19,6 +31,8 @@ export default function MusicSearchForm() {
         className={module['music-search-bar']}
         type="search"
         placeholder="검색어를 입력해주세요."
+        onChange={handleChangeSearch}
+        value={defaultValue}
       />
     </form>
   );
