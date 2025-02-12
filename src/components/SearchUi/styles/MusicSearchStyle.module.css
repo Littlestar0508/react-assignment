@@ -1,0 +1,31 @@
+.music-search-container {
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  background-color: #854836;
+  border-radius: 8px;
+  width: 1210px;
+}
+
+.music-search-bar {
+  width: 100%;
+  color: #f7f7f7;
+  font-size: 1rem;
+  line-height: 3rem;
+  margin-inline-start: 3rem;
+
+  &::placeholder {
+    color: #f7f7f7;
+  }
+}
+
+.music-search-btn {
+  cursor: pointer;
+  position: absolute;
+  padding: 0.5rem;
+  left: 0;
+
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+}

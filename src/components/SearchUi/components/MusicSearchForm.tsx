@@ -1,34 +1,25 @@
-import { useState } from 'react';
+import module from '../styles/MusicSearchStyle.module.css';
+import { IoIosSearch } from 'react-icons/io';
 
 export default function MusicSearchForm() {
-  const [isPlay, setIsPlay] = useState(false);
-
-  const handleClick = () => {
-    setIsPlay(!isPlay);
-  };
-
   return (
-    <>
-      <button type="button" onClick={handleClick}>
-        오픈
+    <form className={module['music-search-container']}>
+      <label htmlFor="music-search" className="sr-only">
+        음악 검색
+      </label>
+      <button
+        className={module['music-search-btn']}
+        type="button"
+        aria-label="음악 검색"
+      >
+        <IoIosSearch size={32} fill="#F7F7F7" />
       </button>
-      <iframe
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%,-50%)',
-        }}
-        hidden={isPlay}
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/L7cAqBQVjYI?si=4Qj8WBLmyHeRsEag"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
+      <input
+        id="music-search"
+        className={module['music-search-bar']}
+        type="search"
+        placeholder="검색어를 입력해주세요."
       />
-    </>
+    </form>
   );
 }
