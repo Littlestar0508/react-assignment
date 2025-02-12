@@ -1,0 +1,36 @@
+.music-card-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #854836;
+  border-radius: 8px;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.album-cover {
+  width: 160px;
+  border-radius: 8px;
+}
+
+.song-title {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: inline-start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 160px;
+}
+
+.artist-name {
+  color: #854836;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: inline-start;
+  width: 160px;
+}
