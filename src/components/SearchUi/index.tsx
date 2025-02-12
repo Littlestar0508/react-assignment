@@ -9,6 +9,7 @@ export default function SearchMusicUI() {
         flexFlow: 'column',
         alignItems: 'center',
         gap: '3rem',
+        marginBlockStart: '2rem',
       }}
     >
       <MusicSearchForm />
