@@ -17,6 +17,7 @@ export default function SearchMusicUI() {
         alignItems: 'center',
         gap: '3rem',
         marginBlockStart: '2rem',
+        position: 'relative',
       }}
     >
       <MusicSearchForm defaultValue={searchResult} onUpdate={setsearchResult} />

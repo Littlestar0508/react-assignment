@@ -25,6 +25,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 160px;
+  height: 24px;
 }
 
 .artist-name {
@@ -33,4 +34,8 @@
   font-weight: 600;
   text-align: inline-start;
   width: 160px;
+  text-align: inline-start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

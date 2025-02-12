@@ -2,4 +2,5 @@
   display: grid;
   grid-template-columns: repeat(4, 250px);
   gap: 4.375rem;
+  margin-block-end: 10rem;
 }
