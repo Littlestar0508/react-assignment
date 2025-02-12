@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MusicCardList from './components/MusicCardList';
 import MusicSearchForm from './components/MusicSearchForm';
+import MusicSearchFooter from './components/MusicSearchFooter';
 import musicList from './data/MusicList';
 import { type MusicArrayItem, type MusicArrayList } from './types';
 export default function SearchMusicUI() {
@@ -23,6 +24,7 @@ export default function SearchMusicUI() {
         list={resultList}
         listFilter={searchResult.toLowerCase()}
       />
+      <MusicSearchFooter />
     </div>
   );
 }
