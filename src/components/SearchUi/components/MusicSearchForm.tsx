@@ -1,7 +1,9 @@
-import module from '../styles/MusicSearchStyle.module.css';
+import style from '../styles/MusicSearchStyle.module.css';
 import { IoIosSearch } from 'react-icons/io';
 import { setQuery } from '../utils/query-function';
 import { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 interface MusicSearchFormType {
   searchResult: string;
@@ -20,6 +22,11 @@ export default function MusicSearchForm({
 
   const handleClickSearch = () => {
     if (!isPossibleSearch) {
+      // sweetalert2 오류
+      // withReactContent(Swal).fire({
+      //   icon: 'error',
+      //   title: 'oops',
+      // });
       return;
     }
     setQuery(searchResult);
@@ -32,14 +39,14 @@ export default function MusicSearchForm({
 
   return (
     <form
-      className={module['music-search-container']}
+      className={style['music-search-container']}
       action={handleClickSearch}
     >
       <label htmlFor="music-search" className="sr-only">
         음악 검색
       </label>
       <button
-        className={module['music-search-btn']}
+        className={style['music-search-btn']}
         type="button"
         aria-label="음악 검색"
         onClick={handleClickSearch}
@@ -49,7 +56,7 @@ export default function MusicSearchForm({
       </button>
       <input
         id="music-search"
-        className={module['music-search-bar']}
+        className={style['music-search-bar']}
         type="search"
         placeholder="검색어를 입력해주세요."
         onChange={handleChangeSearch}
