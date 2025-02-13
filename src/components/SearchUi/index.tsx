@@ -15,7 +15,6 @@ export default function SearchMusicUI() {
 
   useEffect(() => {
     const handlePopState = () => {
-      console.log(1);
       setSearchResult(baseResult);
     };
 
