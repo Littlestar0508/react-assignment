@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MusicCardList from './components/MusicCardList';
 import MusicSearchForm from './components/MusicSearchForm';
 import MusicSearchFooter from './components/MusicSearchFooter';
@@ -6,12 +6,25 @@ import musicList from './data/MusicList';
 import { type MusicArrayItem, type MusicArrayList } from './types';
 import { getQuery } from './utils/query-function';
 
-const baseResult = getQuery() ?? '';
+const baseResult = () => getQuery() ?? '';
 
 export default function SearchMusicUI() {
-  const [searchResult, setsearchResult] = useState(baseResult);
+  const [searchResult, setSearchResult] = useState(baseResult);
 
   const [resultList, setResultList] = useState<MusicArrayList>(musicList);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      console.log(1);
+      setSearchResult(baseResult);
+    };
+
+    globalThis.addEventListener('popstate', handlePopState);
+
+    return () => {
+      globalThis.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
 
   return (
     <div
@@ -24,7 +37,7 @@ export default function SearchMusicUI() {
         position: 'relative',
       }}
     >
-      <MusicSearchForm searchResult={searchResult} onUpdate={setsearchResult} />
+      <MusicSearchForm searchResult={searchResult} onUpdate={setSearchResult} />
       <MusicCardList
         list={resultList}
         listFilter={searchResult.toLowerCase()}
