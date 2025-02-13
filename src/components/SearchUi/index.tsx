@@ -5,14 +5,13 @@ import MusicSearchFooter from './components/MusicSearchFooter';
 import musicList from './data/MusicList';
 import { type MusicArrayItem, type MusicArrayList } from './types';
 import { getQuery } from './utils/query-function';
+
+const baseResult = getQuery() ?? '';
+
 export default function SearchMusicUI() {
-  const [searchResult, setsearchResult] = useState('');
+  const [searchResult, setsearchResult] = useState(baseResult);
 
   const [resultList, setResultList] = useState<MusicArrayList>(musicList);
-
-  const [query, setQuery] = useState(getQuery());
-
-  console.log(query);
 
   return (
     <div
@@ -25,7 +24,7 @@ export default function SearchMusicUI() {
         position: 'relative',
       }}
     >
-      <MusicSearchForm defaultValue={searchResult} onUpdate={setsearchResult} />
+      <MusicSearchForm searchResult={searchResult} onUpdate={setsearchResult} />
       <MusicCardList
         list={resultList}
         listFilter={searchResult.toLowerCase()}
