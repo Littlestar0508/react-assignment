@@ -3,7 +3,7 @@ import MusicCardList from './components/MusicCardList';
 import MusicSearchForm from './components/MusicSearchForm';
 import MusicSearchFooter from './components/MusicSearchFooter';
 import musicList from './data/MusicList';
-import { type MusicArrayItem, type MusicArrayList } from './types';
+import { type MusicArrayList } from './types';
 import { getQuery } from './utils/query-function';
 
 const baseResult = () => getQuery() ?? '';
@@ -11,7 +11,7 @@ const baseResult = () => getQuery() ?? '';
 export default function SearchMusicUI() {
   const [searchResult, setSearchResult] = useState(baseResult);
 
-  const [resultList, setResultList] = useState<MusicArrayList>(musicList);
+  const [resultList] = useState<MusicArrayList>(musicList);
 
   useEffect(() => {
     const handlePopState = () => {
