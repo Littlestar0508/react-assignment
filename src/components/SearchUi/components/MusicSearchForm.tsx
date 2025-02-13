@@ -1,6 +1,7 @@
 import module from '../styles/MusicSearchStyle.module.css';
 import { IoIosSearch } from 'react-icons/io';
 import { setQuery } from '../utils/query-function';
+import { useEffect, useState } from 'react';
 
 interface MusicSearchFormType {
   searchResult: string;
@@ -15,9 +16,19 @@ export default function MusicSearchForm({
     onUpdate(e.currentTarget.value);
   };
 
+  const [isPossibleSearch, setIsPossibleSearch] = useState(false);
+
   const handleClickSearch = () => {
+    if (!isPossibleSearch) {
+      return;
+    }
     setQuery(searchResult);
   };
+
+  useEffect(() => {
+    const searchState = searchResult.trim().length > 1;
+    setIsPossibleSearch(searchState);
+  }, [searchResult]);
 
   return (
     <form
@@ -32,6 +43,7 @@ export default function MusicSearchForm({
         type="button"
         aria-label="음악 검색"
         onClick={handleClickSearch}
+        aria-disabled={!isPossibleSearch}
       >
         <IoIosSearch size={32} fill="#F7F7F7" />
       </button>
