@@ -6,6 +6,15 @@ const musicList = [
     tags: ['인디', '일렉트로닉, 락/메탈'],
     album: 'Haute Couture',
     src: 'albumCover/60s-cardin.webp',
+    iframe: `<iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/0fN71Wtgoa8?si=oFOX2SC02J-ug3d4"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        
+      />`,
   },
   {
     id: 'music-2',
@@ -14,6 +23,7 @@ const musicList = [
     tags: ['포크 팝'],
     album: '김광석 네번째',
     src: 'albumCover/about-thirty.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/jppOzsPUi3k?si=BXhPkeszQBb9S5D4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-3',
@@ -22,6 +32,7 @@ const musicList = [
     tags: ['인디', '댄스/팝'],
     album: '내 옆',
     src: 'albumCover/colors.webp',
+    iframe: `<iframe className={module['iframe-video']} width="560" height="315" src="https://www.youtube.com/embed/hEJ01PTaatw?si=u68-EVShtmLfzkfA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-4',
@@ -30,6 +41,7 @@ const musicList = [
     tags: ['인디', '락/메탈'],
     album: "Don't Feel Sad",
     src: 'albumCover/dont-feel-sad.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/2uIKfZZB8FA?si=jKxfoT66OWnpYz0E" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-5',
@@ -38,6 +50,7 @@ const musicList = [
     tags: ['락/메탈'],
     album: '계몽',
     src: 'albumCover/february.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/SzONXNvBsNk?si=Oe52oEN9WuIX8QCw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-6',
@@ -46,6 +59,7 @@ const musicList = [
     tags: ['댄스/팝', '랩/힙합', '발라드', '알앤비/소울'],
     album: 'The Winning',
     src: 'albumCover/love-wins-all.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/h-XrgiZiQgw?si=7ate7aYN4-5bLDMU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-7',
@@ -54,6 +68,7 @@ const musicList = [
     tags: ['포크 팝', '어쿠스틱'],
     album: '버스커 버스커 1집',
     src: 'albumCover/first-love.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/cu7KbVshYNo?si=1bQDv9D28Qp8Qthu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-8',
@@ -62,6 +77,7 @@ const musicList = [
     tags: ['인디', '락/메탈'],
     album: 'TEAM BABY',
     src: 'albumCover/hyeya.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/B5cvbwOmfY0?si=e_TDayjdB5yCtwYO" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-9',
@@ -70,6 +86,7 @@ const musicList = [
     tags: ['얼터너티브 팝'],
     album: 'I Love You So',
     src: 'albumCover/i-love-you-so.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/NwFVSclD_uc?si=42yhQryJGP_mF5L3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`,
   },
   {
     id: 'music-10',
@@ -78,6 +95,7 @@ const musicList = [
     tags: ['발라드'],
     album: '복면가왕 68회',
     src: 'albumCover/ionly-missit.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/673LlyjVDSk?si=WlZ5JRIxwq-NSmzF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-11',
@@ -86,14 +104,16 @@ const musicList = [
     tags: ['락/메탈'],
     album: '23',
     src: 'albumCover/leather-jacket.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Nk6xg5D81eI?si=J4_rvnwZU7zPSIWI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-12',
     artist: 'wave to earth',
-    title: 'love.',
+    title: '사랑으로',
     tags: ['얼터너티브'],
     album: '0.1 flaws and all.',
     src: 'albumCover/love.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Q49pnA4jsp8?si=X6_vUFKMuTG3ud6z" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-13',
@@ -102,6 +122,7 @@ const musicList = [
     tags: ['알앤비/소울'],
     album: 'wonderego',
     src: 'albumCover/me-my-self-and-i.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/uMjsUhfq5gY?si=iO-pebP8I9CFDEpP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-14',
@@ -110,6 +131,7 @@ const musicList = [
     tags: ['발라드'],
     album: 'Kim Hyun Sik Vol.6',
     src: 'albumCover/mylove-bymyside.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/gtOVozYocuw?si=E9EoCPf0gPG38tck" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-15',
@@ -118,6 +140,7 @@ const musicList = [
     tags: ['댄스/팝', '발라드'],
     album: 'RescuE',
     src: 'albumCover/parade.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/7bPffIZot10?si=o6v3rKyUSQpjqdcE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-16',
@@ -126,6 +149,7 @@ const musicList = [
     tags: ['팝'],
     album: 'Fireworks & Rollerblades',
     src: 'albumCover/slow-it-down.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/f4Y3b7un4LE?si=TE7l6W3XrL_LaNfI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-17',
@@ -134,6 +158,7 @@ const musicList = [
     tags: ['인디', '락/메탈'],
     album: '우주의 여름',
     src: 'albumCover/summer-cosmos.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/SFVZlC19iYg?si=b2Cq-7_NSld1AgRP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-18',
@@ -142,6 +167,7 @@ const musicList = [
     tags: ['인디', '포크/어쿠스틱'],
     album: '내 파랑은 항상 검정에 무너져왔어요',
     src: 'albumCover/sunlight.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/RspacsfZQ0U?si=rfRzBaTJHTZBCcNf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-19',
@@ -150,6 +176,7 @@ const musicList = [
     tags: ['얼터너티브', '인디/락'],
     album: '새빛깔',
     src: 'albumCover/tiredof.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/RLEKDJKdVGk?si=vIIGSfcqKT83Z9as" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
   {
     id: 'music-20',
@@ -158,6 +185,7 @@ const musicList = [
     tags: ['락/메탈'],
     album: 'Goodbye, grief.',
     src: 'albumCover/twenty-five-one.webp',
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/LrB-fJn-3w4?si=c1-LcJ1Hami9l9pG" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"'></iframe>`,
   },
 ];
 export default musicList;

@@ -2,8 +2,8 @@ import style from '../styles/MusicSearchStyle.module.css';
 import { IoIosSearch } from 'react-icons/io';
 import { setQuery } from '../utils/query-function';
 import { useEffect, useState } from 'react';
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
+// import Swal from 'sweetalert2';
+// import withReactContent from 'sweetalert2-react-content';
 
 interface MusicSearchFormType {
   searchResult: string;

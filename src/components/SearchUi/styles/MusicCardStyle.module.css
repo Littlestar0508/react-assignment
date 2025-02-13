@@ -39,3 +39,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.iframe-video {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iframe-video::backdrop {
+  background-color: #181818d0;
+}
