@@ -4,10 +4,15 @@ import MusicSearchForm from './components/MusicSearchForm';
 import MusicSearchFooter from './components/MusicSearchFooter';
 import musicList from './data/MusicList';
 import { type MusicArrayItem, type MusicArrayList } from './types';
+import { getQuery } from './utils/query-function';
 export default function SearchMusicUI() {
   const [searchResult, setsearchResult] = useState('');
 
   const [resultList, setResultList] = useState<MusicArrayList>(musicList);
+
+  const [query, setQuery] = useState(getQuery());
+
+  console.log(query);
 
   return (
     <div
