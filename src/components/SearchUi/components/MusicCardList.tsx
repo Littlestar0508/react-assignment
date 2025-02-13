@@ -25,10 +25,31 @@ export default function MusicCardList({ list, listFilter }: MusicCartListType) {
   });
 
   return (
-    <div className={module['music-card-list-container']}>
-      {newList.map((item) => (
-        <MusicCard key={item.id} item={item} />
-      ))}
-    </div>
+    <>
+      {newList.length > 0 && (
+        <>
+          <p style={{ color: '#854836', fontWeight: 600, fontSize: '1.25rem' }}>
+            {newList.length}개 검색됨
+          </p>
+          <div className={module['music-card-list-container']}>
+            {newList.map((item) => (
+              <MusicCard key={item.id} item={item} />
+            ))}
+          </div>
+        </>
+      )}
+      {!(newList.length > 0) && (
+        <p
+          style={{
+            height: '100vh',
+            color: '#854836',
+            fontWeight: 600,
+            fontSize: '1.25rem',
+          }}
+        >
+          검색된게 없음!
+        </p>
+      )}
+    </>
   );
 }
