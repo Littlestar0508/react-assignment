@@ -3,12 +3,12 @@ import module from '../styles/MusicCardListStyle.module.css';
 import { MusicArrayList } from '../types';
 import { checkArrContainTrue, replaceBlankToNull } from '../utils/filter';
 
-interface MusicCartListType {
+interface MusicCardListType {
   list: MusicArrayList;
   listFilter: string;
 }
 
-export default function MusicCardList({ list, listFilter }: MusicCartListType) {
+export default function MusicCardList({ list, listFilter }: MusicCardListType) {
   const newList = list.filter((item) => {
     return (
       replaceBlankToNull(item.artist).includes(
