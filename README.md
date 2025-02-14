@@ -18,6 +18,10 @@
 
 - [벨로그 링크 - README.md 대체](https://velog.io/@rist98/React-UI-%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88-%EA%B5%AC%ED%98%84)
 
+### 6주차 과제
+
+- [벨로그 링크 - README.md 대체](https://velog.io/@rist98/React-%EA%B2%80%EC%83%89-UI-%EA%B5%AC%ED%98%84)
+
 <hr/>
 
 아직 github page 배포는 진행하지 못했습니다..
