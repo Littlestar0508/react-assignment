@@ -50,9 +50,8 @@ export default function MusicSearchForm({
       </label>
       <button
         className={style['music-search-btn']}
-        type="button"
+        type="submit"
         aria-label="음악 검색"
-        onClick={handleClickSearch}
         aria-disabled={!isPossibleSearch}
       >
         <IoIosSearch size={32} fill="#F7F7F7" />
