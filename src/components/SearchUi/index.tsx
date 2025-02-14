@@ -6,13 +6,16 @@ import musicList from './data/MusicList';
 import { type MusicArrayList } from './types';
 import { getQuery } from './utils/query-function';
 
+// query값을 받아오고 만약 존재하지 않는다면 공백(null or undefined 방지)
 const baseResult = () => getQuery() ?? '';
 
 export default function SearchMusicUI() {
+  // 검색어 상태
   const [searchResult, setSearchResult] = useState(baseResult);
-
+  // musicList 상태
   const [resultList] = useState<MusicArrayList>(musicList);
 
+  // 뒤로가기 구현을 위한 useEffect
   useEffect(() => {
     const handlePopState = () => {
       setSearchResult(baseResult);

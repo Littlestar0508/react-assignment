@@ -46,6 +46,7 @@
   transform: translate(-50%, -50%);
 }
 
+/* dimmed처리 */
 .iframe-video::backdrop {
   background-color: #181818d0;
 }

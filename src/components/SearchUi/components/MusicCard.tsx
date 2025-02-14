@@ -58,6 +58,7 @@ export default function MusicCard({ item }: MusicCardType) {
 
   const tiltRef = useRef<HTMLElement>(null);
 
+  // vanilla-tilt 적용
   useEffect(() => {
     const tiltElement = tiltRef.current;
 
@@ -74,6 +75,7 @@ export default function MusicCard({ item }: MusicCardType) {
         type="button"
         aria-label={`${item.title} 듣기`}
         style={{ cursor: 'pointer' }}
+        // 팝업을 위한 속성
         popoverTarget={item.id}
       >
         <img className={module['album-cover']} src={item.src} alt="" />
@@ -81,9 +83,11 @@ export default function MusicCard({ item }: MusicCardType) {
       <h3 className={module['song-title']}>{item.title}</h3>
       <p className={module['artist-name']}>{item.artist}</p>
       <div
+        // 팝업을 위한 속성
         popover="auto"
         id={item.id}
         className={module['iframe-video']}
+        // string으로 작성된 iframe태그를 html코드로 변경
         dangerouslySetInnerHTML={{ __html: iframeCode }}
       />
     </section>
