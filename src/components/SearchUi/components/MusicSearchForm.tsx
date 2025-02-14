@@ -2,8 +2,8 @@ import style from '../styles/MusicSearchStyle.module.css';
 import { IoIosSearch } from 'react-icons/io';
 import { setQuery } from '../utils/query-function';
 import { useEffect, useState } from 'react';
-// import Swal from 'sweetalert2';
-// import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 interface MusicSearchFormType {
   searchResult: string;
@@ -20,13 +20,16 @@ export default function MusicSearchForm({
 
   const [isPossibleSearch, setIsPossibleSearch] = useState(false);
 
-  const handleClickSearch = () => {
+  const showAlert = async (): Promise<void> => {
+    await withReactContent(Swal).fire({
+      icon: 'error',
+      title: '최소 공백을 제외한 1글자 이상 입력해주세요.',
+    });
+  };
+
+  const handleClickSearch = async () => {
     if (!isPossibleSearch) {
-      // sweetalert2 오류
-      // withReactContent(Swal).fire({
-      //   icon: 'error',
-      //   title: 'oops',
-      // });
+      await showAlert();
       return;
     }
     setQuery(searchResult);

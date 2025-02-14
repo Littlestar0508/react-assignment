@@ -56,20 +56,20 @@ const tiltOptions: TiltOptions = {
 export default function MusicCard({ item }: MusicCardType) {
   const iframeCode = item.iframe;
 
-  // const tiltRef = useRef<HTMLElement>(null);
+  const tiltRef = useRef<HTMLElement>(null);
 
-  // useEffect(() => {
-  //   const tiltElement = tiltRef.current;
+  useEffect(() => {
+    const tiltElement = tiltRef.current;
 
-  //   if (!tiltElement) {
-  //     return;
-  //   }
+    if (!tiltElement) {
+      return;
+    }
 
-  //   VanillaTilt.init(tiltElement, tiltOptions);
-  // });
+    VanillaTilt.init(tiltElement, tiltOptions);
+  });
 
   return (
-    <section className={module['music-card-container']} /*ref={tiltRef}*/>
+    <section className={module['music-card-container']} ref={tiltRef}>
       <button
         type="button"
         aria-label={`${item.title} 듣기`}
